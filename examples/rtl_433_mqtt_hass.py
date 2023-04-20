@@ -415,7 +415,29 @@ mappings = {
             "entity_category": "diagnostic"
         }
     },
+    "reed_open": {
+        "device_type": "binary_sensor",
+        "object_suffix": "reed",
+        "config": {
+            "device_class": "safety",
+            "force_update": "true",
+            "payload_on": "1",
+            "payload_off": "0",
+            "entity_category": "diagnostic"
+        }
+    },
 
+    "contact_open": {
+        "device_type": "binary_sensor",
+        "object_suffix": "contact",
+        "config": {
+            "device_class": "safety",
+            "force_update": "true",
+            "payload_on": "1",
+            "payload_off": "0",
+            "entity_category": "diagnostic"
+        }
+    },
     "rssi": {
         "device_type": "sensor",
         "object_suffix": "rssi",
