@@ -101,6 +101,7 @@ import time
 import json
 import paho.mqtt.client as mqtt
 import re
+from pprint import pformat
 
 
 discovery_timeouts = {}
@@ -709,6 +710,7 @@ def mqtt_message(client, userdata, msg):
         return
 
     topicprefix = "/".join(msg.topic.split("/", 2)[:2])
+    logging.debug("MQTT Message Receivved - Client: " + str(client) + " Topic Prefix:" + str(topicprefix) + " Data:" + pformat(data))
     bridge_event_to_hass(client, topicprefix, data)
 
 
