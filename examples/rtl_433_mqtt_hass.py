@@ -745,6 +745,7 @@ def rtl_433_device_info(data):
 
     path = ''.join(list(filter(lambda item: item, path_elements)))
     id = '-'.join(id_elements)
+    logging.debug("Device Info: Path-",path,"ID-",id)
     return (path, id)
 
 
