@@ -824,7 +824,7 @@ def bridge_event_to_hass(mqttc, topicprefix, data):
     for key in data.keys():
         if key in mappings:
             # topic = "/".join([topicprefix,"devices",model,instance,key])
-            topic = "/".join([base_topic, key])
+            topic = "/".join([topicprefix,base_topic, key])
             if publish_config(mqttc, topic, model, device_id, mappings[key]):
                 published_keys.append(key)
         else:
